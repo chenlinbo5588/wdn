@@ -1,0 +1,9 @@
+/license.txt
+/nbproject/
+/user_guide/
+/application/cache/*
+/application/logs/*
+/application/templates_c/*
+Guardfile
+.sass-cache
+/img/Files/20*

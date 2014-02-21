@@ -48,6 +48,9 @@ class TZ_Controller extends CI_Controller {
     protected function assign($property, $value) {
 	$this->_smarty->assign($property, $value);
     }
+    public function setTitle($title = ''){
+        $this->assign('TITLE',$title);
+    }
     
     public function setSEO($title = '', $keywords = '', $desc = ''){
 	$this->assign('TITLE',$title);

@@ -177,6 +177,10 @@ s,u{
     width: 1200px;
 }
 
+.main-body .content-wrapper {
+    width:1000px;
+}
+
 .gray-logo {
     background:url(../img/sprite.png) no-repeat -70px 0px;
     width:60px;
@@ -185,9 +189,6 @@ s,u{
 
 /** 联系我们 */
 
-.wrapper_contact_us {
-    width:1000px;
-}
 .contact-us {
     padding:150px 0 90px 0;
     width:850px;

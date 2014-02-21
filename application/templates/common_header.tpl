@@ -33,4 +33,4 @@
     </header>
     <section>
         <div class="main-body">
-            <div class="content-wrapper {$contentWrapper}">
+            <div class="content-wrapper">

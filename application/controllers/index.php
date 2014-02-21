@@ -24,7 +24,6 @@ class Index extends TZ_Controller {
     public function contact_us()
     {
         $this->assign('top_menu','联系我们');
-        $this->assign('contentWrapper','wrapper_contact_us');
         $this->setTitle('联系我们');
         $this->display("contact_us");
     }

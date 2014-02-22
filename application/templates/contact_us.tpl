@@ -1,4 +1,13 @@
 {include file="common_header.tpl"}
+               <style>
+                    .main-body {
+                        background-color:#eaeaea;
+                    }
+                   
+                    .main-body .content-wrapper {
+                        width:1000px;
+                    }
+                </style>
                 <section>
                     <div class="contact-us">
                         <div class="row" style="padding:0px;">

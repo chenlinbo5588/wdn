@@ -1,4 +1,13 @@
 {include file="common_header.tpl"}
+        <style>
+            body{
+                background-color:#121212;
+            }
+            
+            .main-body .content-wrapper {
+                width:1000px;
+            }
+        </style>
         <section>
             <div class="join-us-bg">
                 <ul class="clearfix">
@@ -23,11 +32,8 @@
                                </li>
                             </ul>
                         </div>
-                    
                     </li>
                 </ul>
-                
-                
             </div>
         </section>         
 {include file="common_footer.tpl"}

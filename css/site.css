@@ -108,7 +108,7 @@ i{ font-style:normal;}
 
 body{
     font-size:12px;
-    background-color:#121212;
+    background-color:#000000;
 }
 
 s,u{
@@ -145,6 +145,10 @@ s,u{
     float:left;
 }
 
+.menu li.first {
+    margin-right:10px;
+}
+
 .menu .last {
     float:right;
 }
@@ -157,9 +161,11 @@ s,u{
     padding:15px 0 0 0;
     font-size:20px;
     text-align:center;
-    font-family:"Microsoft YaHei"
+    font-family:"Microsoft YaHei";
 }
 .menu li a:hover {
+    background:#1068de;
+    color:#ffffff;
     text-decoration:none;
 }
 
@@ -169,25 +175,82 @@ s,u{
 }
 
 .main-body {
-    background:url(../img/bg_transition.png) #eaeaea;
+    background:url(../img/bg_transition.png) #000000;
 }
 
-.main-body,.content-wrapper {
+.main-body, .content-wrapper {
     margin: 0 auto;
     width: 1200px;
 }
 
-.main-body .content-wrapper {
-    width:1000px;
+/** 首页 */
+.slider_wrapper {
+    position:relative;
 }
 
+.slider_wrapper .slider_item {
+    width:1200px;
+    height:800px;
+}
+
+.site_links {
+    position:relative;
+    top:-160px;
+    z-index:6;
+    width:881px;
+    margin:0 auto;
+}
+
+.site_links li {
+    margin-right:10px;
+    float:left;
+    height:340px;
+    width:210px;
+    background-color:#fff;
+}
+
+.site_links h3 {
+    width:80px;
+    height:27px;
+    background:url(../img/sprite.png) no-repeat -210px 0px;
+    text-indent: -1000em;
+    margin-top:17px;
+}
+.site_links .two_row {
+    background-color:transparent;
+}
+
+.site_links figcaption {
+    font-size:15px;
+}
+
+.site_links .two_row .row {
+    background-color: #ffffff;
+    height:166px;
+}
+
+.site_links .txt_abouts_us {
+    background-position:-210px 0px;
+}
+
+.site_links .txt_latest {
+    background-position:-210px -36px;
+}
+
+.site_links .txt_affiliate {
+    background-position:-210px -70px;
+}
+
+.site_links .txt_product {
+    background-position:-210px -106px;
+}
+
+/** 联系我们 */
 .gray-logo {
     background:url(../img/sprite.png) no-repeat -70px 0px;
     width:60px;
     height:50px;
 }
-
-/** 联系我们 */
 
 .contact-us {
     padding:150px 0 90px 0;
@@ -293,7 +356,6 @@ s,u{
 
 .bussiness-info li {
     float:left;
-    1border:1px solid red;
     position:relative;
     padding:12px;
     height:220px;
@@ -368,8 +430,6 @@ s,u{
     height:78px;
     display:block;
 }
-
-
 
 /** 加盟 */
 .join-us {

@@ -7,7 +7,7 @@
     <meta name="keywords" content="{$KEYWORDS}">
     <meta name="description" content="{$DESCRIPTION}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {foreach from=$cssFiles item=cssItem}<link href="/css/{$cssItem}.css" rel='stylesheet' type='text/css'>
+    {foreach from=$cssFiles item=cssItem}<link href="css/{$cssItem}.css" rel='stylesheet' type='text/css'>
     {/foreach}<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
@@ -31,4 +31,5 @@
     </header>
     <section>
         <div class="main-body">
-            <div class="content-wrapper">
+            <div class="logo-bg">
+                <div class="content-wrapper">

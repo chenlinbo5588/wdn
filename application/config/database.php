@@ -83,8 +83,8 @@ if(ENVIRONMENT == 'production'){
     
     $db['default']['db_debug'] = false;
 }else{
-    $db['default']['hostname'] = '192.168.171.128';
-    //$db['default']['hostname'] = '192.168.152.129';
+    //$db['default']['hostname'] = '192.168.171.128';
+    $db['default']['hostname'] = '192.168.152.129';
     $db['default']['username'] = 'root';
     $db['default']['password'] = '123123';
 

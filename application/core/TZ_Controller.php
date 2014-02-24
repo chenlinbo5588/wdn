@@ -30,7 +30,7 @@ class TZ_Controller extends CI_Controller {
 	
 	$this->_smarty->setTemplateDir(APPPATH.'templates'.DS);
 	$this->_smarty->setCompileDir(APPPATH.'templates_c'.DS);
-	$this->_smarty->setPluginsDir(APPPATH.'plugins'.DS);
+	//$this->_smarty->setPluginsDir(APPPATH.'plugins'.DS);
 	$this->_smarty->setCacheDir(APPPATH.'cache'.DS);
 	$this->_smarty->setConfigDir(APPPATH.'config'.DS);
     }

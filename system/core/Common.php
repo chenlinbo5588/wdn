@@ -731,7 +731,11 @@ function pageArrayGenerator($currPage,$pageSize,$total, $url = '',$callJs = 'pag
     );
 }
 
-    
+
+//排序
+function cmp_func($a, $b) {
+	return strcmp($a['datetime'], $b['datetime']);
+}
 
 
 /* End of file Common.php */

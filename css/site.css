@@ -147,6 +147,7 @@ s,u{
 
 .menu li.first {
     margin-right:10px;
+    margin-left: 150px;
 }
 
 .menu .last {
@@ -157,9 +158,9 @@ s,u{
     display:block;
     color:#fff;
     width:135px;
-    height:45px;
-    padding:15px 0 0 0;
-    font-size:20px;
+    height:40px;
+    padding:20px 0 0 0;
+    font-size:16px;
     text-align:center;
     font-family:"Microsoft YaHei";
 }
@@ -174,8 +175,8 @@ s,u{
     color:#ffffff;
 }
 
-.main-body {
-    background:url(../img/bg_transition.png) #000000;
+.main-body .content-wrapper {
+    background:url(../img/bg_transition.png) transparent;
 }
 
 .main-body, .content-wrapper {
@@ -190,7 +191,7 @@ s,u{
 
 .slider_wrapper .slider_item {
     width:1200px;
-    height:800px;
+    height:750px;
 }
 
 .site_links {
@@ -430,6 +431,315 @@ s,u{
     height:78px;
     display:block;
 }
+
+/** 关于我们 */
+.about_us_nav {
+    position:absolute;
+    top:100px;
+    left:136px;
+    color:#dfe1e2;
+}
+
+.about_us_nav li {
+    filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#CC293a4e,endColorstr=#CC293a4e);
+    background:rgba(41,58,78,0.7);
+    z-index:9;
+    margin:10px;
+    width:137px;
+    height:60px;
+}
+
+.about_us_nav li a {
+    color:#dfe1e2;
+    width:100%;
+    height:40px;
+    padding:20px 0 0 0;
+    text-align:center;
+    display:block;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#company_detail {
+    margin-left:136px;
+    margin-top: -150px;
+    position: relative;
+}
+#company_detail .item {
+    width:870px;
+    padding:20px 30px;
+    background:#fff;
+}
+
+#company_detail .item h3 {
+    display:none;
+}
+
+#company_detail .item p {
+    font-family:"Microsoft YaHei";
+    text-indent:2em;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+
+/** 人才招聘 **/
+.zhaopin_bg {
+    width:738px;
+}
+
+.zhaopin_bg_1 {
+    background:url(../img/zhaopin/zhaopin_bg_01.png) no-repeat;
+    height:50px;
+}
+
+.zhaopin_bg_2 {
+    background:url(../img/zhaopin/zhaopin_bg_02.png) no-repeat;
+    height:49px;
+}
+
+.zhaopin_bg_3 {
+    background:url(../img/zhaopin/zhaopin_bg_03.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_4 {
+    background:url(../img/zhaopin/zhaopin_bg_04.png) no-repeat;
+    height:49px;
+}
+.zhaopin_bg_5 {
+    background:url(../img/zhaopin/zhaopin_bg_05.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_6 {
+    background:url(../img/zhaopin/zhaopin_bg_06.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_7 {
+    background:url(../img/zhaopin/zhaopin_bg_07.png) no-repeat;
+    height:49px;
+}
+.zhaopin_bg_8 {
+    background:url(../img/zhaopin/zhaopin_bg_08.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_9 {
+    background:url(../img/zhaopin/zhaopin_bg_09.png) no-repeat;
+    height:49px;
+}
+.zhaopin_bg_10 {
+    background:url(../img/zhaopin/zhaopin_bg_10.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_11 {
+    background:url(../img/zhaopin/zhaopin_bg_11.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_12 {
+    background:url(../img/zhaopin/zhaopin_bg_12.png) no-repeat;
+    height:49px;
+}
+.zhaopin_bg_13 {
+    background:url(../img/zhaopin/zhaopin_bg_13.png) no-repeat;
+    height:50px;
+}
+.zhaopin_bg_14 {
+    background:url(../img/zhaopin/zhaopin_bg_14.png) no-repeat;
+    height:49px;
+}
+.zhaopin_bg_15 {
+    background:url(../img/zhaopin/zhaopin_bg_15.png) no-repeat;
+    height:50px;
+}
+
+.blackFont {
+    font-family:"SimHei";
+}
+
+.advertise {
+    padding:200px 0 90px 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.advertise .title p {
+    font-family:"SimSun";
+    line-height:30px;
+    font-size:16px;
+
+}
+    
+
+.advertise .position_list {
+    
+}
+
+.advertise .slogan {
+    float:left;
+    width:800px;
+    position: relative;
+    top:-70px;
+}
+
+.slogan .text {
+    position:absolute;
+}
+.slogan .text p {
+    font-family:"SimHei";
+    line-height:30px;
+    font-size:18px;
+}
+.slogan .text p em {
+    font-size:24px;
+}
+
+.slogan .text1 {
+    bottom: 220px;
+    right: 80px;
+}
+
+.slogan .text2 {
+    bottom:30px;
+    left:60px;
+}
+
+
+
+
+
+.zhao_info {
+    width:200px;
+    position: relative;
+    top: -25px;
+    float:left;
+}
+.zhao_info h2 {
+    font-size:18px;
+    font-weight:bold;
+    padding: 0 0 0 40px;
+}
+
+.position_list {
+    
+}
+
+.position_list li {
+    background:#c4c2c2;
+    text-align:center;
+    padding:13px 20px;
+    width:120px;
+    margin:10px 0;
+}
+
+.position_list li a {
+    font-family:"SimSun";
+    font-size:16px;
+    color:#000000;
+    font-weight:bold;
+}
+
+/** 品牌形象 */
+.brand {
+    padding: 200px 0 90px 0;
+}
+
+#brand_box {
+    margin:0 auto;
+    background:#e9e9e9;
+    width:920px;
+    height:720px;
+    box-shadow:10px 10px 40px #aaaaaa;
+    -webkit-box-shadow:10px 10px 40px #aaaaaa;
+    -moz-box-shadow:10px 10px 40px #aaaaaa;
+    -o-box-shadow:10px 10px 40px #aaaaaa;
+}
+
+.brand_title {
+    padding:20px 0;
+}
+
+.brand_title h3 {
+    border-left:30px solid #1068de;
+    font-family:"SimHei";
+    font-size:18px;
+    text-indent:20px;
+}
+
+
+.store_list {
+    position:relative;
+    padding:20px 35px;
+}
+
+.store_pager a {
+    width:45px;
+    height:170px;
+    display:block;
+    position:absolute;
+    top:50%;
+    margin-top:-85px;
+}
+
+.store_pager .page_prev {
+    left:-55px;
+    background:url(../img/sprite.png) no-repeat -210px -350px;
+}
+
+.store_pager .page_next {
+    right:-55px;
+    background:url(../img/sprite.png) no-repeat -260px -350px;
+}
+
+.pager_footer a {
+    width:16px;
+    height:16px;
+    display:block;
+    float:left;
+}
+.pager_footer span {
+    float:left;
+    display:block;
+    padding:0 10px;
+    font-family:"SimHei";
+    font-size:15px;
+    font-weight:bold;
+}
+
+.pager_footer {
+    float:right;
+    margin-right:60px;
+}
+
+.pager_footer .page_prev {
+    background:url(../img/sprite.png) no-repeat -225px -520px;
+}
+
+.pager_footer .page_next {
+    background:url(../img/sprite.png) no-repeat -225px -536px;
+}
+
+
+.store_list .store_item {
+    float:left;
+    width:265px;
+    height:250px;
+    margin:0 15px 30px 0;
+}
+
+.store_list .store_item span {
+    display:block;
+    text-align:center;
+    font-family:"SimHei";
+    font-size:15px;
+    font-weight:bold;
+    padding:10px 0px;
+}
+
+.store_list .store_item img {
+    width:265px;
+    height:200px;
+}
+
 
 /** 加盟 */
 .join-us {

@@ -654,6 +654,15 @@ s,u{
     -o-box-shadow:10px 10px 40px #aaaaaa;
 }
 
+.brand .join_us_tel {
+    float:right;
+    color:#3d3d3d;
+    font-size:15px;
+    font-family:"SimHei";
+    font-weight:bold;
+    margin:20px 200px;
+}
+
 .brand_title {
     padding:20px 0;
 }
@@ -730,7 +739,7 @@ s,u{
     display:block;
     text-align:center;
     font-family:"SimHei";
-    font-size:15px;
+    font-size:16px;
     font-weight:bold;
     padding:10px 0px;
 }
@@ -739,6 +748,7 @@ s,u{
     width:265px;
     height:200px;
 }
+
 
 
 /** 加盟 */

@@ -3,8 +3,8 @@
                         <div class="join_us clearfix">
                             <div id="join_us_nav">
                                 <ul>
-                                    <li><a {if $join_us_menu == '加盟政策'}class="active"{/if} href="{url_path('index','join_us',array(),true)}">加盟政策</a></li>
-                                    <li><a {if $join_us_menu == '加盟流程'}class="active"{/if} href="{url_path('index','join_us_flow',array(),true)}">加盟流程</a></li>
+                                    <li {if $join_us_menu == '加盟政策'}class="active"{/if}><a href="{url_path('index','join_us',array(),true)}">加盟政策</a></li>
+                                    <li {if $join_us_menu == '加盟流程'}class="active"{/if}><a href="{url_path('index','join_us_flow',array(),true)}">加盟流程</a></li>
                                  </ul>
                             </div>
                             <div class="blue_bg_1"></div>
@@ -26,8 +26,14 @@
                             <div id="join_text">
                                 <p class="yahei">价位优势(零售价)：上衣19-79元，棉衣99元-199元，户外99元-299元，所有鞋69元-199元；比同品质同类品牌低50%</p>
                             </div>
-                            
-                            
+                            <div id="join_contact">
+                                <a class="download_file" href="/img/万达奴加盟合作申请表2.doc">点击下载《万达奴加盟申请表》</a>
+                                <div class="join_doc">
+                                    <span class="blackFont">免费索取</span>
+                                    <strong class="blackFont">加盟资料</strong>
+                                </div>
+                                <a class="goback yahei" href="javascript:history.go(-1);"><em>返&nbsp回</em></a>
+                             </div>
                         </div>
                     </section>
 {include file="common_footer.tpl"}

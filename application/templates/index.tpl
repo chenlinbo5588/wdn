@@ -20,7 +20,7 @@
                                 <div class="row" style="margin-bottom: 8px;">
                                     <h3 class="title txt_latest">最新,Latest</h3>
                                     <p style="margin:20px 0 0 10px;">
-                                        <a href="{url_path('news','list',array(),true)}"><img src="/img/home_news.png"/></a>
+                                        <a href="{url_path('index','news_list',array(),true)}"><img src="/img/home_news.png"/></a>
                                         <span style="font-size:12px">最新报道</span>
                                     </p>
                                 </div>
@@ -63,7 +63,7 @@
                     <script>
                         $('#scrollImg').cycle({
                             fx:"fade",
-                            timeout: 2000,
+                            timeout: 5000,
                             center:true,
                             pause:false,
                             pagerEvent: "click.cycle"

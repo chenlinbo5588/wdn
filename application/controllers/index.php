@@ -125,6 +125,7 @@ class Index extends TZ_Controller {
     
     public function join_us()
     {
+        $this->assign('join_us_menu','加盟政策');
         $this->setTitle('加盟政策');
         $this->display("join_us");
         
@@ -132,7 +133,16 @@ class Index extends TZ_Controller {
     
     public function join_us_flow()
     {
+        $this->assign('join_us_menu','加盟流程');
         $this->setTitle('加盟流程');
         $this->display("join_us_flow");
+    }
+    
+    
+    public function news_list()
+    {
+        $this->setTitle('');
+        $this->display("news_list");
+        
     }
 }

@@ -20,7 +20,7 @@
                                 <div class="row" style="margin-bottom: 8px;">
                                     <h3 class="title txt_latest">最新,Latest</h3>
                                     <p style="margin:20px 0 0 10px;">
-                                        <a href="javascript:void(0)"><img src="/img/home_news.png"/></a>
+                                        <a href="{url_path('news','list',array(),true)}"><img src="/img/home_news.png"/></a>
                                         <span style="font-size:12px">最新报道</span>
                                     </p>
                                 </div>
@@ -36,7 +36,7 @@
                                 <div class="row">
                                     <h3 class="title txt_affiliate">加盟,Affiliate</h3>
                                     <p style="margin:20px 0 0 10px;">
-                                        <a href="javascript:void(0)"><img src="/img/home_join_us.png"/></a>
+                                        <a href="{url_path('index','join_us',array(),true)}"><img src="/img/home_join_us.png"/></a>
                                         <span style="margin-top:10px">诚邀加盟/携手共赢</span>
                                     </p>
                                 </div>

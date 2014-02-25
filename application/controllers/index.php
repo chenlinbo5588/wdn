@@ -125,9 +125,14 @@ class Index extends TZ_Controller {
     
     public function join_us()
     {
-        $this->setTitle('加盟');
+        $this->setTitle('加盟政策');
         $this->display("join_us");
         
     }
     
+    public function join_us_flow()
+    {
+        $this->setTitle('加盟流程');
+        $this->display("join_us_flow");
+    }
 }

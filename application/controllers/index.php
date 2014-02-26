@@ -141,8 +141,18 @@ class Index extends TZ_Controller {
     
     public function news_list()
     {
-        $this->setTitle('');
+        $this->setTitle('新闻列表页');
         $this->display("news_list");
-        
     }
+    
+    public function news_detail()
+    {
+        
+        $id = $_GET['id'];
+        
+        $this->setTitle('新闻详情');
+        $this->display("news_detail");
+    }
+    
+    
 }

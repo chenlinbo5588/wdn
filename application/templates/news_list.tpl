@@ -2,10 +2,11 @@
                     <section>
                         <div class="slider_wrapper">
                             <div class="slider" id="scrollImg" style="height:750px;">
-                                <div class="slider_item" style="background:url(/img/home/F1_01.jpg) no-repeat 50% 50%;"></div>
+                                <div class="slider_item" style="background:url(/img/news/banner1.jpg) no-repeat 50% 50%;"></div>
                             </div>
                         </div>
                         <div class="news clearfix">
+                            <div class="news_text"></div>
                             <div class="news_list">
                                 <article>
                                     <div class="news_item clearfix">

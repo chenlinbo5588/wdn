@@ -7,8 +7,17 @@
              </ul>
           </div>
 
-          <h2 class="sub-header">新闻公告列表</h2>
+          <!--<h2 class="sub-header">新闻公告列表</h2>-->
           <div class="table-responsive">
+            <form role="form" class="form-inline" name="searchForm" action="{url_path('news','search',array(),true)}" method="get">
+                <input type="hidden" name="c" value="news"/>
+                <input type="hidden" name="m" value="search"/>
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input type="text" class="form-control" name="title" value="{$title}" style="width:300px;" placeholder="搜索:请输入新闻标题"/>
+                    <button type="submit" class="btn btn-primary">搜索</button>
+                </div>
+            </form>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -24,7 +33,10 @@
                {foreach from=$list item=item}
                 <tr>
                   <td>{$item['news_id']}</td>
-                  <td>{$item['title']}</td>
+                  <td>
+                      <p>{$item['title']}</p>
+                      <p>{$item['title2']}</p>
+                  </td>
                   <td>{$item['status']}</td>
                   <td>{$item['createtime']}</td>
                   <td>{$item['updatetime']}</td>

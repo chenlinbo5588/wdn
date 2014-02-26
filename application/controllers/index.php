@@ -141,18 +141,97 @@ class Index extends TZ_Controller {
     
     public function news_list()
     {
-        $this->setTitle('新闻列表页');
-        $this->display("news_list");
+        
+        try {
+            $this->load->model("News_Model");
+            
+            $where = array(
+                'status' => '已发布'
+            );
+            
+            $this->db->where($where);
+            $config['total_rows'] = $this->db->count_all_results($this->News_Model->_tableName);
+            $config['per_page'] = 3;
+            
+            
+            if(empty($_GET['page'])){
+                $_GET['page'] = 1;
+            }
+            
+            $pager = pageArrayGenerator($_GET['page'],$config['per_page'],$config['total_rows'],url_path('index','news_list',array(),true));
+            $this->assign('page',$pager);
+            
+            //$condition['select'] = 'a';
+            $condition['where'] = $where;
+            $condition['pager'] = array(
+                'page_size' => $config['per_page'],
+                'current_page' => isset($_GET['page']) ? intval($_GET['page']) : 1
+            );
+            
+            $data = $this->News_Model->getList($condition);
+            foreach($data as $k => $v ){
+                $data[$k]['detail_url'] = url_path('index','news_detail',array('id' => $v['news_id']),true);
+            };
+            
+            //print_r($data);
+            //print_r($pager);
+            
+            $this->assign('list',$data);
+            $this->assign('page',$pager);
+            $this->setTitle('新闻列表页');
+            $this->display("news_list");
+        }catch(Exception $e){
+            
+        }
+        
     }
     
     public function news_detail()
     {
         
-        $id = $_GET['id'];
+        try {
+            $this->load->model("News_Model");
+            $where = array(
+                'status' => '已发布',
+                'news_id' => isset($_GET['id']) ? $_GET['id'] : 0
+            );
+            $condition['where'] = $where;
+            
+            $data = $this->News_Model->getList($condition);
+            
+            if(isset($data[0])){
+                $this->assign('data',$data[0]);
+            }
+        }catch(Exception $e){
+            
+        }
         
         $this->setTitle('新闻详情');
         $this->display("news_detail");
     }
     
+    
+    public function news_preview()
+    {
+        
+        try {
+            $this->load->model("News_Model");
+            $where = array(
+                'news_id' => isset($_GET['id']) ? $_GET['id'] : 0
+            );
+            $condition['where'] = $where;
+            
+            $data = $this->News_Model->getList($condition);
+            
+            if(isset($data[0])){
+                $this->assign('data',$data[0]);
+            }
+        }catch(Exception $e){
+            
+        }
+        
+        $this->setTitle('新闻详情');
+        $this->display("news_detail");
+    }
     
 }

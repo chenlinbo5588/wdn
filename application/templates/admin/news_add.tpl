@@ -26,8 +26,12 @@
                     {if $action == 'edit' }
                     <input type="hidden" id="news_id" name="news_id" value="{$info['news_id']}" />
                     {/if}
-                    <label for="title">标题</label>
-                    <input type="text" class="form-control" name="title" value="{$info['title']}" id="title" data-required style="width:600px;" placeholder="请输入店铺名称，最多100个汉字"/>
+                    <label for="title">主标题</label>
+                    <input type="text" class="form-control" name="title" value="{$info['title']}" id="title" data-required style="width:600px;" placeholder="请输入新闻主标题，最多100个汉字"/>
+                </div>
+                <div class="form-group">
+                    <label for="title2">次要标题</label>
+                    <input type="text" class="form-control" name="title2" value="{$info['title2']}" id="title2" style="width:600px;" placeholder="请输入新闻呲次要标题，最多100个汉字"/>
                 </div>
                 <div class="form-group">
                     <label for="content1">内容</label>

@@ -16,6 +16,8 @@ class News_Model extends TZ_Model {
         $data = array(
             'news_id' => NULL,
             'title' => $param['title'],
+            'title' => $param['title2'],
+            'cover_img' => $param['cover_img'],
             'content' => $param['content'],
             'status' => $param['status'],
             'createtime' => $param['createtime'],
@@ -36,6 +38,8 @@ class News_Model extends TZ_Model {
         
         $data = array(
             'title' => $param['title'],
+            'title2' => $param['title2'],
+            'cover_img' => $param['cover_img'],
             'content' => $param['content'],
             'updatetime' => $param['updatetime']
         );

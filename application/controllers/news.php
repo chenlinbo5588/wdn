@@ -7,13 +7,87 @@ class News extends TZ_Admin_Controller {
         $this->assign('sideMenuName','新闻公告管理');
     }
    
+    public function search(){
+        
+        try {
+            if(empty($_GET['page'])){
+                $_GET['page'] = 1;
+            }
+            $config['per_page'] = 10;
+            
+            
+            $this->load->model("News_Model");
+            $keywords = isset($_GET['title']) ? $_GET['title'] : '';
+            $this->db->like('title', $keywords, 'both'); 
+            $this->db->order_by("updatetime desc");
+            
+            //$condition['select'] = 'a,b';
+            $condition['pager'] = array(
+                'page_size' => $config['per_page'],
+                'current_page' => isset($_GET['page']) ? intval($_GET['page']) : 1
+            );
+            
+            if($condition['pager']){
+                $query = $this->db->get($this->News_Model->_tableName,$condition['pager']['page_size'],($condition['pager']['current_page'] - 1) * $condition['pager']['page_size']);
+            }else{
+                $query = $this->db->get($this->News_Model->_tableName);
+            }
+        
+            $data = $query->result_array();
+            
+            
+            $this->db->like('title', $keywords, 'both'); 
+            $config['total_rows'] = $this->db->count_all_results($this->News_Model->_tableName);
+            
+            $pager = pageArrayGenerator($_GET['page'],$config['per_page'],$config['total_rows'],url_path('news','search',array('title' => $keywords),true));
+            
+            
+            $this->assign('page',$pager);
+            $this->assign('title',$keywords);
+            
+            $this->_pagerData($data);
+            $this->setMainPage('news_list');
+            $this->displayAdmin();
+        
+        }catch(Exception $e){
+            
+        }
+        
+    }
+    
+    
+    private function _pagerData($data)
+    {
+        foreach($data as $k => $v){
+            $data[$k]['op'] = array(
+                'edit' => '<a href="'.url_path('news','edit',array('id'=>$v['news_id']),true).'">编辑</a>&nbsp;'
+            );
+
+            if($v['is_delete'] == '删除'){
+                $data[$k]['op']['delete'] = '<a href="'.url_path('news','undelete',array('id'=>$v['news_id']),true).'">恢复</a>&nbsp;';
+            }else{
+
+                if($v['status'] == '已发布'){
+                    $data[$k]['op']['url'] = '<a target="_blank" href="'.url_path('index','news_detail',array('id'=>$v['news_id']),true).'">查看详情</a>&nbsp;';
+                    $data[$k]['op']['publish'] = '<a href="'.url_path('news','unpublish',array('id'=>$v['news_id']),true).'">取消发布</a>&nbsp;';
+                }else{
+                    $data[$k]['op']['preview'] = '<a target="_blank" href="'.url_path('index','news_preview',array('id'=>$v['news_id']),true).'">预览</a>&nbsp;';
+                    $data[$k]['op']['publish'] = '<a href="'.url_path('news','publish',array('id'=>$v['news_id']),true).'">发布</a>&nbsp;';
+                }
+
+                $data[$k]['op']['delete'] = '<a class="delete" href="javascript:void(0);" data-href="'.url_path('news','delete',array('id'=>$v['news_id']),true).'">删除</a>&nbsp;';
+            }
+        }
+
+        $this->assign('list',$data);
+    }
+    
     public function index()
     {
-        
         try {
             $this->load->model("News_Model");
             $config['total_rows'] = $this->News_Model->getCount();
-            $config['per_page'] = 2;
+            $config['per_page'] = 10;
             
             
             if(empty($_GET['page'])){
@@ -28,26 +102,8 @@ class News extends TZ_Admin_Controller {
                 'current_page' => isset($_GET['page']) ? intval($_GET['page']) : 1
             );
             $data = $this->News_Model->getList($condition);
-            foreach($data as $k => $v){
-                $data[$k]['op'] = array(
-                    'edit' => '<a href="'.url_path('news','edit',array('id'=>$v['news_id']),true).'">编辑</a>&nbsp;'
-                );
-                
-                if($v['is_delete'] == '删除'){
-                    $data[$k]['op']['delete'] = '<a href="'.url_path('news','undelete',array('id'=>$v['news_id']),true).'">恢复</a>&nbsp;';
-                }else{
-                    
-                    if($v['status'] == '已发布'){
-                        $data[$k]['op']['publish'] = '<a href="'.url_path('news','unpublish',array('id'=>$v['news_id']),true).'">取消发布</a>&nbsp;';
-                    }else{
-                        $data[$k]['op']['publish'] = '<a href="'.url_path('news','publish',array('id'=>$v['news_id']),true).'">发布</a>&nbsp;';
-                    }
-                
-                    $data[$k]['op']['delete'] = '<a class="delete" href="javascript:void(0);" data-href="'.url_path('news','delete',array('id'=>$v['news_id']),true).'">删除</a>&nbsp;';
-                }
-            }
             
-            $this->assign('list',$data);
+            $this->_pagerData($data);
         }catch(Exception $e){
             
         }
@@ -93,7 +149,6 @@ class News extends TZ_Admin_Controller {
     
     
     public function add(){
-        
         $this->assign('action','add');
         $this->setMainPage('news_add');
         $this->displayAdmin();
@@ -137,10 +192,16 @@ class News extends TZ_Admin_Controller {
             $now = date("Y-m-d H:i:s");
             $_POST['updatetime'] = $now;
             
+            $_POST['cover_img'] = '';
+            
+            preg_match('/\/img\/Files\/(\d{6}\/.*?\..*?)"/',$_POST['content'],$img_src);
+            if(is_array($img_src) && !empty($img_src[1])){
+                $_POST['cover_img'] = $img_src[1];
+            }
+            
             if(!isset($_POST['news_id'])){
                 $_POST['status'] = '新增';
                 $_POST['createtime'] = $now;
-                
                 $flag = $this->News_Model->add($_POST);
                 $action = "创建";
             }else{
@@ -168,6 +229,30 @@ class News extends TZ_Admin_Controller {
         $this->setMainPage('news_add');
         $this->displayAdmin();
         
+    }
+    
+    
+    public function preview()
+    {
+        
+        try {
+            $this->load->model("News_Model");
+            $where = array(
+                'news_id' => isset($_GET['id']) ? $_GET['id'] : 0
+            );
+            $condition['where'] = $where;
+            
+            $data = $this->News_Model->getList($condition);
+            
+            if(isset($data[0])){
+                $this->assign('data',$data[0]);
+            }
+        }catch(Exception $e){
+            
+        }
+        
+        $this->setTitle('新闻详情');
+        $this->display("news_detail");
     }
     
 }

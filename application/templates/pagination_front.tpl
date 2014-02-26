@@ -1,4 +1,23 @@
 {if ($page['pager']['pageLastNum'] > 1)}
+<script>
+    function pageJs(num) {
+        var url = location.href;
+        url = url.replace(/#/, '');
+        re = /(\?|&)page=[0-9]*/;
+
+        if(url.match(re)) {
+            url = url.replace(/page=[0-9]*/, 'page=' + num);
+        }
+        else if(-1 == url.indexOf('?')) {
+            url += '?page=' + num;
+        }
+        else {
+            url += '&page=' + num;
+        }
+
+        location.href = url;
+    }
+</script>
 <ul class="pagination pagination-lg">
 	{if ($page['pager']['pageNow'] != 1)}
         <li><a href="javascript:void(0)" onclick="{$page['pager']['callJs']}(1);return false;">第一页</a></li>

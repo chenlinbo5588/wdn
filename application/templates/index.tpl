@@ -2,8 +2,20 @@
                     <section>
                         <div class="slider_wrapper">
                             <div class="slider" id="scrollImg" style="height:750px;">
-                                <div class="slider_item" style="background:url(/img/home/banner1.jpg) no-repeat 50% 50%;"></div>
-                                <div class="slider_item" style="background:url(/img/home/banner2.jpg) no-repeat 50% 50%;"></div>
+                                {if $preview_mode == 'preview_mode'}
+                                    {foreach from=$pdata item=item}
+                                        <div class="slider_item" style="background:url(/img/Files/{$item['path']}) no-repeat 50% 50%;"></div>
+                                    {/foreach}
+                                {else}
+                                    {if empty($data) }
+                                        <div class="slider_item" style="background:url(/img/home/banner1.jpg) no-repeat 50% 50%;"></div>
+                                        <div class="slider_item" style="background:url(/img/home/banner2.jpg) no-repeat 50% 50%;"></div>
+                                    {else}
+                                        {foreach from=$data item=item}
+                                            <div class="slider_item" style="background:url(/img/Files/{$item['path']}) no-repeat 50% 50%;"></div>
+                                        {/foreach}
+                                     {/if}
+                                {/if}
                             </div>
                         </div>
                         <div class="site_links">

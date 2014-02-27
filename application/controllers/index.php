@@ -10,6 +10,46 @@ class Index extends TZ_Controller {
     
     public function index()
     {
+        try {
+            $this->load->model("Image_Model");
+            $condition['where'] = array('name ' => '首页' );
+            $row = $this->Image_Model->getList($condition);
+
+            if(!empty($row[0])){
+                $images = json_decode($row[0]['online_images'],true);
+                
+                if(!empty($images)){
+                    $this->assign('data',$images);
+                }
+            }
+            
+        }catch(Exception $e){
+            //
+        }
+        
+        $this->assign('top_menu','首页');
+        $this->setTitle('万达奴官方网站-首页');
+        $this->display('index');
+    }
+    
+    public function preview()
+    {
+         try {
+            $this->load->model("Image_Model");
+            $condition['where'] = array('name ' => '首页' );
+            $row = $this->Image_Model->getList($condition);
+
+            if(!empty($row[0])){
+                $row[0]['images'] = json_decode($row[0]['images'],true);
+                
+                $this->assign('pdata',$row[0]['images']);
+            }
+            
+        }catch(Exception $e){
+            //
+        }
+        
+        $this->assign('preview_mode',"preview_mode");
         $this->assign('top_menu','首页');
         $this->setTitle('万达奴官方网站-首页');
         $this->display('index');

@@ -23,16 +23,17 @@
             {/if}
             <div class="form-group">
                 <label>用户名</label>
-                <input type="text" name="username" class="form-control"  value="" placeholder="用户名">
+                <input type="text" name="username" class="form-control"  value="{$remember_account}" placeholder="用户名">
             </div>
             <div class="form-group">
                 <label>密码</label>
                 <input type="password" name="password" class="form-control"  placeholder="密码">
             </div>
-
+            {*
             <label class="checkbox">
-                <input type="checkbox" name="remember-me" value="remember-me"> 记住用户名
+                <input type="checkbox" name="remember-me" value="remember-me" checked="checked"> 记住用户名
             </label>
+            *}
             <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
         </form>
     </div>

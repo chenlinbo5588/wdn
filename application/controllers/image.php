@@ -40,10 +40,37 @@ class Image extends TZ_Admin_Controller {
         
     }
     
+    public function publish(){
+        $code = 500;
+        $body = array(
+          'publish' => "failed"
+        );
+        
+        try{
+            $this->load->model("Image_Model");
+            $where = array(
+                'name' =>  $_POST['name']
+            );
+            
+            $this->db->set('updatetime', date('Y-m-d H:i:s'));
+            $this->db->set('online_images', 'images',false);
+            
+            $this->db->where($where);
+            $this->db->update($this->Image_Model->_tableName);
+            
+            $code = 200;
+            $body['publish'] = "success";
+        }catch(Exception $e){
+            $code = 500;
+        }
+        
+        $this->sendFormatJson($code,$body);
+        
+    }
     
     public function deleteImg(){
         
-        $code = 200;
+        $code = 500;
         $body = array(
           'delete_status' => "failed"
         );
@@ -59,9 +86,12 @@ class Image extends TZ_Admin_Controller {
                 $row[0]['images'] = json_decode($row[0]['images'],true);
             }
             
+            $deleteFiles = array();
+            $path = realpath(dirname(APPPATH));
+            
             foreach($row[0]['images'] as $k => $v){
                 if($v['aid'] == $_POST['file_id']){
-                    //@unlink(realpath(dirname(APPPATH)).'/img/Files/'.$v['path']);
+                    $deleteFiles[] = '/img/Files/'.$v['path'];
                     unset($row[0]['images'][$k]);
                 }
             }
@@ -71,7 +101,13 @@ class Image extends TZ_Admin_Controller {
             
             $data['images'] = json_encode($shop[0]['images']);
             
-            $this->Image_Model->update($data);
+            $flag = $this->Image_Model->update($data);
+            
+            if($flag) {
+                foreach($deleteFiles as $val){
+                    @unlink($path.$val);
+                }
+            }
             
             $code = 200;
             $body['delete_status'] = "delete success";

@@ -9,6 +9,13 @@ class Login extends TZ_Controller {
     
     public function index()
     {
+        /*
+        $session = $this->session->all_userdata();
+        
+        if($session['profile']['remember-me']){
+            $this->assign('remember_account',$session['profile']['account']);
+        }
+        */
         $this->setSEO('登录');
         $this->assign('cssFiles',array('bootstrap.min','login'));
         $this->display('login');
@@ -29,6 +36,12 @@ class Login extends TZ_Controller {
             $user = $this->User_Model->getUserByAccount($_POST['username']);
             
             if($user && md5(config_item('encryption_key').$_POST['password']) == $user[0]['password']){
+                
+                /*
+                if($_POST['remember-me'] == 'remember-me'){
+                    $user[0]['remember-me'] = true;
+                }
+                */
                 
                 $this->load->library('encrypt');
                 $user[0]['password'] = $this->encrypt->encode($user[0]['password']);

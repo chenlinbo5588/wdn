@@ -11,7 +11,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="{url_path('admin','password',array(),true)}">修改密码</a></li>
+            <li><a href="{url_path('admin','change_password',array(),true)}">修改密码</a></li>
             <li><a href="{url_path('logout','index',array(),true)}">{$userProfile['account']} 退出</a></li>
           </ul>
           <form class="navbar-form navbar-right">

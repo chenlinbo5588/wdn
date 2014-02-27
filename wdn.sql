@@ -4,7 +4,7 @@ Source Host: 192.168.152.129
 Source Database: wdn
 Target Host: 192.168.152.129
 Target Database: wdn
-Date: 2014/2/26 19:06:23
+Date: 2014/2/27 12:59:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `attachment` (
   `createtime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updatetime` datetime NOT NULL,
   PRIMARY KEY (`aid`)
-) ENGINE=MyISAM AUTO_INCREMENT=177 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=185 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for ci_sessions
@@ -282,11 +282,20 @@ INSERT INTO `attachment` VALUES ('173', '13875291359649937.jpg', '33597', '.jpg'
 INSERT INTO `attachment` VALUES ('174', '13875291359649937.jpg', '33597', '.jpg', '201402/3dc636227bd827ba938d7b16df0d2358.jpg', '600', '328', '0', '0', '2014-02-26 18:17:25', '2014-02-26 18:17:25');
 INSERT INTO `attachment` VALUES ('175', '苏州家乐福.jpg', '204678', '.jpg', '201402/78caecb6a56e4e7110a99dc797b000f0.jpg', '425', '316', '0', '0', '2014-02-26 18:17:34', '2014-02-26 18:17:34');
 INSERT INTO `attachment` VALUES ('176', '苏州家乐福.jpg', '204678', '.jpg', '201402/6de7f2d91bafa07d7e1b00b39c2a2ad6.jpg', '425', '316', '0', '0', '2014-02-26 18:46:37', '2014-02-26 18:46:37');
+INSERT INTO `attachment` VALUES ('177', '首页轮换图.jpg', '143362', '.jpg', '201402/09bd4e798b997b4bf2268c4686209581.jpg', '1200', '800', '0', '0', '2014-02-27 09:59:01', '2014-02-27 09:59:01');
+INSERT INTO `attachment` VALUES ('178', '苏州家乐福.jpg', '204678', '.jpg', '201402/8ed86c92c1c3183afa5aff679027ccef.jpg', '425', '316', '0', '0', '2014-02-27 10:04:04', '2014-02-27 10:04:04');
+INSERT INTO `attachment` VALUES ('179', '首页轮换图.jpg', '143362', '.jpg', '201402/6aa615242ed964ac642be7857a298444.jpg', '1200', '800', '0', '0', '2014-02-27 10:04:23', '2014-02-27 10:04:23');
+INSERT INTO `attachment` VALUES ('180', '苏州家乐福.jpg', '204678', '.jpg', '201402/718a0d4aa7cdfcc7f45e53e7348c60b3.jpg', '425', '316', '0', '0', '2014-02-27 10:04:23', '2014-02-27 10:04:23');
+INSERT INTO `attachment` VALUES ('181', '苏州家乐福.jpg', '204678', '.jpg', '201402/ff1266ebedb91a5c282e96dca3ef65e8.jpg', '425', '316', '0', '0', '2014-02-27 10:11:12', '2014-02-27 10:11:12');
+INSERT INTO `attachment` VALUES ('182', '苏州家乐福.jpg', '204678', '.jpg', '201402/2f7945f2342f3077b3655bdf6cabb932.jpg', '425', '316', '0', '0', '2014-02-27 10:54:05', '2014-02-27 10:54:05');
+INSERT INTO `attachment` VALUES ('183', 'banner1.jpg', '145611', '.jpg', '201402/619eefabc6d5c7115177834ec5e99e1e.jpg', '1200', '800', '0', '0', '2014-02-27 11:11:00', '2014-02-27 11:11:00');
+INSERT INTO `attachment` VALUES ('184', 'banner2.jpg', '107428', '.jpg', '201402/82c6047436fd63b6301404b8e51bcca9.jpg', '1200', '800', '0', '0', '2014-02-27 11:11:00', '2014-02-27 11:11:00');
+INSERT INTO `ci_sessions` VALUES ('361e5681b1cdda28802a93d7ce7a1d64', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36', '1393477099', '');
 INSERT INTO `ci_sessions` VALUES ('baa6ce2b20c8e6f9a38ff0228fd4e123', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0', '1392717023', 'a:2:{s:9:\"user_data\";s:0:\"\";s:7:\"profile\";a:7:{s:2:\"id\";s:1:\"1\";s:7:\"account\";s:5:\"admin\";s:8:\"nickname\";s:5:\"Admin\";s:8:\"password\";s:88:\"l7pNZTSNHw+i/BgHTzpwl07DB5xUGtVG4AzCanJVS2UxFEt9Z39k/SyggtIwXc0NcRPDRMNYq4eR4qONShWU0Q==\";s:10:\"createtime\";s:19:\"2012-12-15 12:17:00\";s:10:\"updatetime\";s:19:\"0000-00-00 00:00:00\";s:6:\"enable\";s:1:\"1\";}}');
 INSERT INTO `ci_sessions` VALUES ('9c270337d75bed90852ad61bddfa73ef', '192.168.152.1', 'Shockwave Flash', '1392633911', '');
 INSERT INTO `ci_sessions` VALUES ('326a624920a5407b19dfcecdecc70d5c', '192.168.152.1', 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)', '1392634696', 'a:2:{s:9:\"user_data\";s:0:\"\";s:7:\"profile\";a:7:{s:2:\"id\";s:1:\"1\";s:7:\"account\";s:5:\"admin\";s:8:\"nickname\";s:5:\"Admin\";s:8:\"password\";s:88:\"oCykA+3feqpF1gOh4Mc+e0xfZZised5LIHxZLpodJNDPYN3dJlhgM2lzKObPmIcdecXz5vuZX57f0hRr6qqlcg==\";s:10:\"createtime\";s:19:\"2012-12-15 12:17:00\";s:10:\"updatetime\";s:19:\"0000-00-00 00:00:00\";s:6:\"enable\";s:1:\"1\";}}');
 INSERT INTO `ci_sessions` VALUES ('573b45a806343020d6118457484a8e65', '192.168.152.1', 'Shockwave Flash', '1392634724', '');
-INSERT INTO `ci_sessions` VALUES ('cf94993bdf45956597685bc4466d9b60', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0', '1393321424', '');
+INSERT INTO `ci_sessions` VALUES ('3813d1905f18b16b075515731e407543', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0', '1393476927', 'a:1:{s:7:\"profile\";a:8:{s:2:\"id\";s:1:\"1\";s:7:\"account\";s:5:\"admin\";s:8:\"nickname\";s:5:\"Admin\";s:8:\"password\";s:88:\"kYtf6KaePA+uEEBXFhAOLSJAMxv+Uvuxo5cllT4A9txCvfC4Vqew38Mztrgtd2XWY5NmSGpVHXOGbG/k8Jb0Zg==\";s:10:\"createtime\";s:19:\"2012-12-15 12:17:00\";s:10:\"updatetime\";s:19:\"2014-02-27 12:47:41\";s:6:\"enable\";s:1:\"1\";s:11:\"remember-me\";b:1;}}');
 INSERT INTO `ci_sessions` VALUES ('9cf5357908243271fad0d7d2497c2ccf', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0', '1392789215', '');
 INSERT INTO `ci_sessions` VALUES ('9c560633e976fe7ddfd0e3e2503676a7', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0', '1392789215', '');
 INSERT INTO `ci_sessions` VALUES ('a2410dd8adc1d6d618156cdaab37cf1b', '192.168.152.1', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0', '1392789215', '');
@@ -310,7 +319,7 @@ INSERT INTO `ci_sessions` VALUES ('5164c4f692d2e89cdf61041b5adbc882', '192.168.1
 INSERT INTO `ci_sessions` VALUES ('5c16a056ca8aa13115c85c0f15d92a89', '192.168.152.1', 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)', '1393403645', '');
 INSERT INTO `ci_sessions` VALUES ('3df4aea65e30ff573c702a3a9043517d', '192.168.152.1', 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30', '1393406155', '');
 INSERT INTO `ci_sessions` VALUES ('fd3c7c367ab50dcdb095bcb89ba64834', '192.168.152.1', 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .N', '1393406160', '');
-INSERT INTO `image` VALUES ('1', '首页', '2014-02-26 18:26:58', '2014-02-26 19:04:02', '[]', '[]');
+INSERT INTO `image` VALUES ('1', '首页', '2014-02-26 18:26:58', '2014-02-27 11:12:26', '[{\"aid\":\"183\",\"path\":\"201402\\/619eefabc6d5c7115177834ec5e99e1e.jpg\"},{\"aid\":\"184\",\"path\":\"201402\\/82c6047436fd63b6301404b8e51bcca9.jpg\"}]', '[{\"aid\":\"183\",\"path\":\"201402\\/619eefabc6d5c7115177834ec5e99e1e.jpg\"},{\"aid\":\"184\",\"path\":\"201402\\/82c6047436fd63b6301404b8e51bcca9.jpg\"}]');
 INSERT INTO `news` VALUES ('1', '测试店铺名称1', '', '', '', '新增', '正常', '2014-02-17 17:16:31', '2014-02-17 17:16:31');
 INSERT INTO `news` VALUES ('2', '测试店铺名称2', '', '', '', '新增', '正常', '2014-02-17 17:16:31', '2014-02-17 17:16:31');
 INSERT INTO `news` VALUES ('3', '测试店铺名称3', '', '', '', '新增', '正常', '2014-02-17 17:17:18', '2014-02-17 17:17:18');
@@ -331,24 +340,24 @@ INSERT INTO `shop` VALUES ('5', '测试1 ', 'hahsdsad', '12', 'fsddsf', '1212', 
 INSERT INTO `shop` VALUES ('6', '测试2 没有图片', 'hahsdsad1111', 'hahsdsad1111', 'a12131233131', '', '已发布', '正常', '2014-02-18 11:51:00', '2014-02-18 17:11:29', '{\"1\":{\"aid\":\"146\",\"path\":\"201402\\/c9c33f3ee7afce1e3b5c2288c31a89b6.jpg\"},\"2\":{\"aid\":\"145\",\"path\":\"201402\\/c840d6354cb62a66c2e5f3b33a444a98.jpg\"}}');
 INSERT INTO `shop` VALUES ('7', 'ahsdhhsad', 'aksdjkasd', '13124', '123123', '', '已发布', '正常', '2014-02-18 16:18:30', '2014-02-18 17:11:26', '[]');
 INSERT INTO `shop` VALUES ('8', 'asdasdjjjsadfasdf', 'asdag', '', '', '', '新增', '正常', '2014-02-18 18:18:21', '2014-02-18 18:18:21', '[{\"aid\":\"155\",\"path\":\"201402\\/51b4af9cbaf322549190044ff5251534.jpg\"}]');
-INSERT INTO `user` VALUES ('1', 'admin', 'Admin', '2b0d88c5251e8e4af46757136ac5305d', '2012-12-15 12:17:00', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('2', 'testclient', 'Test Client', '111111', '2012-12-16 14:33:20', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('3', 'client2', 'Client2', '111111', '2012-12-16 15:30:00', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('4', 'client3', 'Client3', '111111', '2012-12-16 15:30:00', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('11', 'bella', 'bella', '111111', '2012-12-16 21:12:15', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('12', 'cathy', 'cathy', '111111', '2012-12-16 21:16:13', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('13', 'testuser1', 'testuser', '111111', '2012-12-16 21:31:15', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('14', 'testuser2', 'testuser2', '111111', '2012-12-16 21:31:27', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('15', 'testuser3', 'testuser3', '111111', '2012-12-16 21:31:48', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('16', 'testuser4', 'testuser4', '111111', '2012-12-16 21:32:07', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('17', 'testuser5', 'testuser5', '111111', '2012-12-16 21:32:25', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('18', 'testuser6', 'testuser6', '111111', '2012-12-16 21:32:44', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('19', 'testname', 'testname', 'testname', '2012-12-19 21:03:05', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('20', 'testname1', 'testname1', 'testname1', '2012-12-19 22:30:34', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('21', 'bym', 'my name is \'as', '123123', '2013-04-10 11:13:47', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('22', 'test_client1', 'test_client1', '111111', '2013-05-02 15:08:48', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('23', 'test_normal1', 'test_normal1', '111111', '2013-05-02 15:10:47', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('24', 'test_normal2', 'test_normal2', '111111', '2013-05-02 15:13:02', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('25', 'test_normal3', 'test_normal3', '111111', '2013-05-02 15:15:54', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('26', 'test_normal4', 'test_normal4', '111111', '2013-05-02 15:17:42', '0000-00-00 00:00:00', '1');
-INSERT INTO `user` VALUES ('27', 'test_normal5', 'test_normal5', '111111', '2013-05-03 09:28:38', '0000-00-00 00:00:00', '1');
+INSERT INTO `user` VALUES ('1', 'admin', 'Admin', 'b68fc30d305bbe3f9f1fe701fa3333b0', '2012-12-15 12:17:00', '2014-02-27 12:47:41', '1');
+INSERT INTO `user` VALUES ('2', 'testclient', 'Test Client', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 14:33:20', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('3', 'client2', 'Client2', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 15:30:00', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('4', 'client3', 'Client3', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 15:30:00', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('11', 'bella', 'bella', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:12:15', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('12', 'cathy', 'cathy', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:16:13', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('13', 'testuser1', 'testuser', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:31:15', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('14', 'testuser2', 'testuser2', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:31:27', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('15', 'testuser3', 'testuser3', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:31:48', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('16', 'testuser4', 'testuser4', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:32:07', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('17', 'testuser5', 'testuser5', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:32:25', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('18', 'testuser6', 'testuser6', 'fa1db6785a329876ade6dd338c909e61', '2012-12-16 21:32:44', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('19', 'testname', 'testname', 'fa1db6785a329876ade6dd338c909e61', '2012-12-19 21:03:05', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('20', 'testname1', 'testname1', 'fa1db6785a329876ade6dd338c909e61', '2012-12-19 22:30:34', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('21', 'bym', 'my name is \'as', 'fa1db6785a329876ade6dd338c909e61', '2013-04-10 11:13:47', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('22', 'test_client1', 'test_client1', 'fa1db6785a329876ade6dd338c909e61', '2013-05-02 15:08:48', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('23', 'test_normal1', 'test_normal1', 'fa1db6785a329876ade6dd338c909e61', '2013-05-02 15:10:47', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('24', 'test_normal2', 'test_normal2', 'fa1db6785a329876ade6dd338c909e61', '2013-05-02 15:13:02', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('25', 'test_normal3', 'test_normal3', 'fa1db6785a329876ade6dd338c909e61', '2013-05-02 15:15:54', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('26', 'test_normal4', 'test_normal4', 'fa1db6785a329876ade6dd338c909e61', '2013-05-02 15:17:42', '2014-02-27 12:37:18', '1');
+INSERT INTO `user` VALUES ('27', 'test_normal5', 'test_normal5', 'fa1db6785a329876ade6dd338c909e61', '2013-05-03 09:28:38', '2014-02-27 12:37:18', '1');

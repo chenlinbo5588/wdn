@@ -71,18 +71,20 @@ $active_record = TRUE;
 /**
  * wdn
  */
-$db['default']['database'] = 'wdn';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = true;
 
 if(ENVIRONMENT == 'production'){
-    $db['default']['hostname'] = '202.10.2.41';
-    $db['default']['username'] = 'root';
-    $db['default']['password'] = '8777';
+    $db['default']['database'] = 'wandanu';
+    $db['default']['hostname'] = '116.255.238.50';
+    $db['default']['username'] = 'wandanu';
+    $db['default']['password'] = 'wdn60298910';
     
     $db['default']['db_debug'] = false;
 }else{
+    $db['default']['database'] = 'wdn';
     //$db['default']['hostname'] = '192.168.171.128';
     $db['default']['hostname'] = '192.168.152.129';
     $db['default']['username'] = 'root';
@@ -93,7 +95,7 @@ if(ENVIRONMENT == 'production'){
 
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = '';
-//$db['default']['char_set'] = 'UTF-8';
+$db['default']['char_set'] = 'UTF-8';
 
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;

@@ -88,8 +88,11 @@ class Index extends TZ_Controller {
                     $file_list[$i]['is_photo'] = in_array($file_ext, $ext_arr);
                     $file_list[$i]['filetype'] = $file_ext;
                     
-                    $file_list[$i]['filename'] = $filename; //文件名，包含扩展名
                     
+                    $file_list[$i]['filename'] = urlencode($filename); //文件名，包含扩展名
+                    if('production' == ENVIRONMENT){
+                        $filename = iconv('gb2312','UTF-8',$filename);
+                    }
                     if(!strpos($file,$file_ext)){
                         $file_ext = strtoupper($file_ext);
                     }
@@ -137,7 +140,7 @@ class Index extends TZ_Controller {
         $this->assign('prev_link',url_path('index','brand',array('page' => ($current_page <=1 ? 1 : ($current_page - 1))),true));
         $this->assign('next_link',url_path('index','brand',array('page' => ($current_page >= $total_page ?  $total_page : ($current_page + 1))),true));
         
-        
+        $this->assign('top_menu','品牌形象');
         $this->setTitle('品牌形象');
         $this->display("brand");
     }
@@ -158,6 +161,7 @@ class Index extends TZ_Controller {
     
     public function advertise()
     {
+        $this->assign('top_menu','人才招聘');
         $this->setTitle('人才招聘');
         $this->display("advertise");
     }

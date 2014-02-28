@@ -14,6 +14,7 @@ class TZ_Controller extends CI_Controller {
 	parent::__construct();
 	$this->_init_smarty();
 	$this->_init_config();
+    $this->setDefaultSEO();
 	
     }
     
@@ -59,9 +60,9 @@ class TZ_Controller extends CI_Controller {
     }
     
     public function setDefaultSEO(){
-	$this->assign('TITLE','');
-	$this->assign('KEYWORDS','');
-	$this->assign('DESCRIPTION','');
+	$this->assign('TITLE','万达奴官方网站');
+	$this->assign('KEYWORDS','万达奴官方网站、万达奴时尚休闲、万达奴户外休闲、万达奴鞋子、男装、服装、女装、运动服、运动鞋、万达奴专卖店、万达奴网上专卖店、万达奴连锁加盟、招商加盟、加盟万达奴、万达奴开店、万达奴正品、万达奴网上商城、万达奴网站');
+	$this->assign('DESCRIPTION','万达奴官方网站、万达奴时尚休闲、万达奴户外休闲、万达奴鞋子、男装、服装、女装、运动服、运动鞋、万达奴专卖店、万达奴网上专卖店、万达奴连锁加盟、招商加盟、加盟万达奴、万达奴开店、万达奴正品、万达奴网上商城、万达奴网站');
     }
     /**
      *

@@ -18,8 +18,12 @@
                                         </li>
                                         <li class="contact-join-us">
                                             <p title="加盟热线">400-667-3383</p>
-                                            <a class="qq first" href="javascript:void(0);" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=2057655251&eid=218808P8z8p8Q8K8y8R8R&o=&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">QQ在线咨询</a>
-                                            <a class="qq second" href="javascript:void(0);" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=2057655251&eid=218808P8z8p8Q8K8y8R8R&o=&q=7&ref='+document.location, '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">QQ在线咨询</a>
+                                            <a class="qq first" alt="点击这里给我发消息" title="点击这里给我发消息" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2057655251&site=qq&menu=yes">QQ在线咨询</a>
+                                            <a class="qq second" alt="点击这里给我发消息" title="点击这里给我发消息" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2057655251&site=qq&menu=yes">QQ在线咨询</a>
+                                            <!--
+                                            <a class="qq first" href="javascript:void(0);" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=2057655251&site=qq&menu=yes', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">QQ在线咨询</a>
+                                            <a class="qq second" href="javascript:void(0);" onclick="javascript:window.open('http://b.qq.com/webc.htm?new=0&sid=2057655251&o=http://www.wandn.cn&q=7', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">QQ在线咨询</a>
+                                            -->
                                         </li>
                                     </ul>
                                 </aside>

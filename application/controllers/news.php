@@ -27,6 +27,9 @@ class News extends TZ_Admin_Controller {
                 'current_page' => isset($_GET['page']) ? intval($_GET['page']) : 1
             );
             
+            $condition['where'] = array(
+              'is_delete !=' => '删除'  
+            );
             if($condition['pager']){
                 $query = $this->db->get($this->News_Model->_tableName,$condition['pager']['page_size'],($condition['pager']['current_page'] - 1) * $condition['pager']['page_size']);
             }else{
@@ -100,6 +103,9 @@ class News extends TZ_Admin_Controller {
             $condition['pager'] = array(
                 'page_size' => $config['per_page'],
                 'current_page' => isset($_GET['page']) ? intval($_GET['page']) : 1
+            );
+            $condition['where'] = array(
+              'is_delete !=' => '删除'
             );
             $data = $this->News_Model->getList($condition);
             

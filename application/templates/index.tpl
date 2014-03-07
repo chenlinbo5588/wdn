@@ -72,7 +72,7 @@
                             </ul>
                             <footer>
                                 <div  class="home_footer"">
-                                    <p>上海万达奴版权所有@<em>备案号：</em></p>
+                                    <p>上海万达奴版权所有@<em>备案号：沪ICP备14006663号</em></p>
                                     <span>全国加盟热线：400-667-3383</span>
                                 </div>
                             </footer>

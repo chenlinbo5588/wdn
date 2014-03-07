@@ -27,7 +27,7 @@
                                 <p class="yahei">价位优势(零售价)：上衣19-79元，棉衣99元-199元，户外99元-299元，所有鞋69元-199元；比同品质同类品牌低50%</p>
                             </div>
                             <div id="join_contact">
-                                <a class="download_file" href="/img/万达奴加盟合作申请表2.doc">点击下载《万达奴加盟申请表》</a>
+                                <a class="download_file" href="/img/wandanu.doc">点击下载《万达奴加盟申请表》</a>
                                 <div class="join_doc">
                                     <span class="blackFont">免费索取</span>
                                     <strong class="blackFont">加盟资料</strong>

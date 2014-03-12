@@ -58,13 +58,13 @@
                                     <div class="row" style="margin-bottom: 8px;">
                                         <h3 class="title txt_product">产品,About Us</h3>
                                         <p style="margin:20px 0 0 10px;">
-                                            <a href="javascript:void(0)"><img src="/img/home_sport.jpg"/></a>
+                                            <a href="http://shop109331117.taobao.com/shop/view_shop.htm?spm=a1z09.1.0.0.GcWTgq&mytmenu=mdianpu&utkn=g,zhh3vi6n6k2o7rnl1394531484608&user_number_id=2005782290&scm=1028.1.1.20001" target="_blank"><img src="/img/home_sport.jpg"/></a>
                                             <span></span>
                                         </p>
                                     </div>
                                     <div class="row">
                                         <p style="margin:16px 0 0 10px;">
-                                            <a href="javascript:void(0)"><img src="/img/home_outer_door_sport.png"/></a>
+                                            <a href="http://shop109331117.taobao.com/shop/view_shop.htm?spm=a1z09.1.0.0.GcWTgq&mytmenu=mdianpu&utkn=g,zhh3vi6n6k2o7rnl1394531484608&user_number_id=2005782290&scm=1028.1.1.20001" target="_blank"><img src="/img/home_outer_door_sport.png"/></a>
                                             <span>用时尚诠释，让经典永恒。</span>
                                         </p>
                                     </div>

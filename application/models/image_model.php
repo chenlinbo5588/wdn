@@ -49,18 +49,10 @@ class Image_Model extends TZ_Model {
             $data['online_images'] = json_encode($param['online_images']);
         }
         
-        $where = array(
-            'name' => $param['name']
-        );
+        $this->db->where('name', $param['name']);
+        return $this->db->update($this->_tableName, $data);
         
-        $string = $this->db->update_string($this->_tableName, $data,$where);
         
-        $this->db->query($string);
         
-        if($this->db->affected_rows()){
-            return true;
-        }else{
-            return false;
-        }
     }
 }

@@ -19,7 +19,7 @@
                 </script>
                 {/if}
               <form role="form" name="addForm" action="{url_path('image','save',array(),true)}" method="post">
-                <input type="hidden" name="name" value="首页"/>
+                <input type="hidden" name="name" value="home_page"/>
                 <div class="form-group">
                     <h2>首页轮播图片</h2>
                 </div>

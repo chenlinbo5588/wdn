@@ -12,9 +12,9 @@ class Index extends TZ_Controller {
     {
         try {
             $this->load->model("Image_Model");
-            $condition['where'] = array('name ' => '首页' );
+            $condition['where'] = array('name ' => 'home_page');
             $row = $this->Image_Model->getList($condition);
-
+            
             if(!empty($row[0])){
                 $images = json_decode($row[0]['online_images'],true);
                 
@@ -36,7 +36,7 @@ class Index extends TZ_Controller {
     {
          try {
             $this->load->model("Image_Model");
-            $condition['where'] = array('name ' => '首页' );
+            $condition['where'] = array('name ' => 'home_page' );
             $row = $this->Image_Model->getList($condition);
 
             if(!empty($row[0])){

@@ -12,7 +12,7 @@ class Image extends TZ_Admin_Controller {
         try {
             $this->load->model("News_Model");
             
-            $data = $this->_getRowByName('首页');
+            $data = $this->_getRowByName('home_page');
             
             ///print_r($data);
             $this->assign('data',$data);
@@ -30,7 +30,7 @@ class Image extends TZ_Admin_Controller {
         $this->load->model("Image_Model");
         $condition['where'] = array('name ' => $name );
         $row = $this->Image_Model->getList($condition);
-
+        
         if(!empty($row[0])){
             $row[0]['images'] = json_decode($row[0]['images'],true);
             return $row[0];
